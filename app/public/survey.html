@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <title>Friend Finder</title>
+</head>
+<body class='container'>
+
+    <!-- Modal -->
+    <div class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Your new BFF!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p id='modal-text'>Modal body text goes here.</p>
+                <img id='modal-image'>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" id='hide-modal'>Ok</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Body Content Starts Here -->
+    <h1 class='border-bottom'>Survey Questions</h1>
+    <br>
+    <h4>About You</h4>
+
+    <!-- Survey -->
+    <form>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Required">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Link to Photo</label>
+            <input type="text" class="form-control" id="image" placeholder="Required">
+        </div>
+        <div class="form-group"><h6>Question 1</h6>
+            <label for="exampleFormControlSelect1">I like puppies</label>
+            <select class="form-control" id="q1">
+                <option>1 - Dogs are for people who have no self esteem</option>
+                <option>2 - Not really my thing/I'm allergic</option>
+                <option>3 - I like other people's dogs</option>
+                <option>4 - ...but they grow up</option>
+                <option>5 - ALL THE PUPPIES!</option>
+            </select>
+        </div>
+        <div class="form-group"><h6>Question 2</h6>
+            <label for="exampleFormControlSelect1">I like kittens</label>
+            <select class="form-control" id="q2">
+                <option>1 - God made cats so you can hate something without sinning</option>
+                <option>2 - Cat's don't help my lack of self esteem/I'm allergic</option>
+                <option>3 - They're fine. I guess.</option>
+                <option>4 - ...but they grow up</option>
+                <option>5 - ALL THE KITTENS!</option>
+            </select>
+        </div>
+        <div class="form-group"><h6>Question 3</h6>
+            <label for="exampleFormControlSelect1">I like Thai food</label>
+            <select class="form-control" id="q3">
+                <option>1 - No. Also I am a bad person</option>
+                <option>2 - I don't like tasty food</option>
+                <option>3 - I can take or leave food with flavor</option>
+                <option>4 - As long as it isn't spicy</option>
+                <option>5 - And as spicy as possible!</option>
+            </select>
+        </div>
+        <div class="form-group"><h6>Question 4</h6>
+            <label for="exampleFormControlSelect1">I like tacos</label>
+            <select class="form-control" id="q4">
+                <option>1 - No. I hate everything and everyone.</option>
+                <option>2 - There is no reason to pick option 2</option>
+                <option>3 - Seriously, the only valid choice is #5</option>
+                <option>4 - Go down 1 more to get to the correct answer</option>
+                <option>5 - Yes. (this is the correct answer)</option>
+            </select>
+        </div>
+        <div class="form-group"><h6>Question 5</h6>
+            <label for="exampleFormControlSelect1">I think Eddie Izzard is funny</label>
+            <select class="form-control" id="q5">
+                <option>1 - No. Laughing is the worst!</option>
+                <option>2 - Cross-dressing comedians are not funny</option>
+                <option>3 - I don't know who that is. Also I realize that I need to re-evaluate my life choices</option>
+                <option>4 - But not as funny as Spongebob Squarepants - Now that's comedy gold!</option>
+                <option>5 - Cake or death!</option>
+            </select>
+        </div>
+        <div class="form-group"><h6>Question 6</h6>
+            <label for="exampleFormControlSelect1">I am unafraid to admit that I like Mathematics</label>
+            <select class="form-control" id="q6">
+                <option>1 - Def hate math & numbers. Also I can't read.</option>
+                <option>2 - School was hard.</option>
+                <option>3 - I can balance a budget</option>
+                <option>4 - I have used complex mathematics to solve real-world problems</option>
+                <option>5 - I know my Erdős number</option>
+            </select>
+        </div>
+        <div class="form-group"><h6>Question 7</h6>
+            <label for="exampleFormControlSelect1">I am afraid of commitment</label>
+            <select class="form-control" id="q7">
+                <option>1 - I can't commit to an answer to this question</option>
+                <option>2 - Maybe I can commit to answer this question</option>
+                <option>3 - I can probably answer this question</option>
+                <option>4 - I'll almost certainly answer this question</option>
+                <option>5 - I will answer this question or die trying</option>
+            </select>
+        </div>
+        <div class="form-group"><h6>Question 8</h6>
+            <label for="exampleFormControlSelect1">I like sports</label>
+            <select class="form-control" id="q8">
+                <option>1 - They have touchdowns in basketball, right?</option>
+                <option>2 - Meh.</option>
+                <option>3 - "Local Sports Team!"</option>
+                <option>4 - I get nervous if I go more than 20 minutes without the soothing sounds of ESPN's "Sports Center"</option>
+                <option>5 - I am gaining weight to make more room on my body for &lt;insert sports team&gt; tattoos</option>
+            </select>
+        </div>
+        <div class="form-group"><h6>Question 9</h6>
+            <label for="exampleFormControlSelect1">Tell us your thoughts about governmental regulation</label>
+            <select class="form-control" id="q9">
+                <option>1 - Law and order are THE WORST</option>
+                <option>2 - Only if someone takes my stuff...</option>
+                <option>3 - If people aren't treating each other the way they want to be treated then the government should step in.</option>
+                <option>4 - Private businesses should take lessons from governmental efficiency</option>
+                <option>5 - If someone wants to tie their shoes a special way they should have to file a form with the FDS (Federal Department of Shoelaces)</option>
+            </select>
+        </div>
+        <div class="form-group"><h6>Question 10</h6>
+            <label for="exampleFormControlSelect1">I am prepared for every possible situation</label>
+            <select class="form-control" id="q10">
+                <option>1 - I will die if it rains or doesn't rain today</option>
+                <option>2 - I live paycheck to paycheck</option>
+                <option>3 - I have a fully-funded emergency fund</option>
+                <option>4 - I am prepared for retirement</option>
+                <option>5 - I expect the Spanish Inquisition</option>
+            </select>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary mb-2" id='submit-button'>Submit Answers</button>
+    </form>
+    <div>
+        <br><br>
+        <a href='/api'>API Friends List </a> | <a target="_blank" rel="noopener noreferrer" href='https://github.com/hankatola/Friend_finder'>GitHub Repo</a>
+        <br><br>
+    </div>
+    <!-- Body Content Ends Here -->
+
+
+
+    <!-- Script -->
+    <script>
+        const ans = {
+            name:'',
+            image:'',
+            scores:[]
+        }
+        $('#submit-button').on('click',function(){
+            event.preventDefault()
+            ans.name = $('#name').val()
+            ans.image = $('#image').val()
+            if (!ans.name || !ans.image) {
+                return alert('Your name and image URL are required')
+            }
+            ans.scores.push(parseInt($('#q1').val()[0]))
+            ans.scores.push(parseInt($('#q2').val()[0]))
+            ans.scores.push(parseInt($('#q3').val()[0]))
+            ans.scores.push(parseInt($('#q4').val()[0]))
+            ans.scores.push(parseInt($('#q5').val()[0]))
+            ans.scores.push(parseInt($('#q6').val()[0]))
+            ans.scores.push(parseInt($('#q7').val()[0]))
+            ans.scores.push(parseInt($('#q8').val()[0]))
+            ans.scores.push(parseInt($('#q9').val()[0]))
+            ans.scores.push(parseInt($('#q10').val()[0]))
+            $.post('http://localhost:8080/',ans,(res)=>{
+                console.log(res)
+                $('#modal-text').text(res.name)
+                $('#modal-image').attr('src',res.image).css('height','400px').css('width','400px')
+                $('.modal').show()
+
+            })
+        })
+        $('#hide-modal').on('click',function(){$('.modal').hide()})
+    </script>
+</body>
+</html>
