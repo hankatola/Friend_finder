@@ -189,7 +189,7 @@
             ans.scores.push(parseInt($('#q8').val()[0]))
             ans.scores.push(parseInt($('#q9').val()[0]))
             ans.scores.push(parseInt($('#q10').val()[0]))
-            $.post('http://localhost:8080/',ans,(res)=>{
+            $.post('/',ans,(res)=>{
                 console.log(res)
                 $('#modal-text').text(res.name)
                 $('#modal-image').attr('src',res.image).css('height','400px').css('width','400px')
